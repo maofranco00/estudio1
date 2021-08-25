@@ -23,6 +23,12 @@ public class App
     public static ControladorRequerimientos controlador = new ControladorRequerimientos();
     public static void main( String[] args )
     {
+
+
+        ModeloDatos modelo1 = new ModeloDatos();
+                      
+        
+
         /*System.out.println("Requerimiento 1");
         VistaRequerimientos.requerimiento1();
 
@@ -35,16 +41,12 @@ public class App
         System.out.println("\nRequerimiento 4");
         VistaRequerimientos.requerimiento4();*/
 
-        ModeloDatos modelo1 = new ModeloDatos();
-        ModeloDatos modelo2 = new ModeloDatos();               
-        ModeloDatos modelo3 = new ModeloDatos();
-
         try {
-            ArrayList <Compras_1> lista1 = controlador.consultarRequerimiento1();
-            Object matriz1[][] =  new Object [lista1.size()][2];
-            for(int i = 0 ; i < lista1.size();i++){
-                matriz1[i][0] = lista1.get(i).getID_Compra();
-                matriz1[i][1] = lista1.get(i).getID_Proyecto();
+            ArrayList <Compras_1> lista = controlador.consultarRequerimiento1();
+            Object matriz1[][] =  new Object [lista.size()][2];
+            for(int i = 0 ; i < lista.size();i++){
+                matriz1[i][0] = lista.get(i).getID_Compra();
+                matriz1[i][1] = lista.get(i).getID_Proyecto();
             }
             modelo1.datos = matriz1;
             JTable tabla1 = new JTable(modelo1);
@@ -57,7 +59,7 @@ public class App
             e.printStackTrace();
         }
         
-
+        ModeloDatos modelo2 = new ModeloDatos(); 
         try {
             ArrayList<Compras_2> lista2 = controlador.consultarRequerimiento2();
             Object matriz2[][] =  new Object [lista2.size()][2];
@@ -74,6 +76,7 @@ public class App
             e.printStackTrace();
         }
     
+        ModeloDatos modelo3 = new ModeloDatos();
         try {
             ArrayList<Compras_3> lista3 = controlador.consultarRequerimiento3();
             Object matriz3[][] =  new Object [lista3.size()][2];
