@@ -26,8 +26,8 @@ public class App
 
 
         ModeloDatos modelo1 = new ModeloDatos();
-        ModeloDatos modelo2 = new ModeloDatos();               
-        ModeloDatos modelo3 = new ModeloDatos();
+                       
+       
 
         /*System.out.println("Requerimiento 1");
         VistaRequerimientos.requerimiento1();
@@ -59,7 +59,7 @@ public class App
             e.printStackTrace();
         }
         
-        
+        ModeloDatos modelo2 = new ModeloDatos();
         try {
             ArrayList<Compras_2> lista2 = controlador.consultarRequerimiento2();
             Object matriz2[][] =  new Object [lista2.size()][2];
@@ -76,7 +76,7 @@ public class App
             e.printStackTrace();
         }
     
-        
+        ModeloDatos modelo3 = new ModeloDatos();
         try {
             ArrayList<Compras_3> lista3 = controlador.consultarRequerimiento3();
             Object matriz3[][] =  new Object [lista3.size()][2];
